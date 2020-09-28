@@ -37,7 +37,10 @@ class MainWindow(QtWidgets.QMainWindow):
         label.setAlignment(Qt.AlignCenter)
 
         self.setCentralWidget(label)
-        
+
+    def contextMenuEvent(self, event):
+        print("Context menu event!")
+        super(MainWindow, self).contextMenuEvent(event)        
         
     # SLOT: This accepts a string, e.g. the window title, and prints it
     def onWindowTitleChange(self, s):
